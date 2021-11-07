@@ -1,4 +1,4 @@
-""" This is the increment function"""
+""" This is the Calculator program"""
 class Calculator:
     """ This is the Calculator class"""
 
@@ -18,4 +18,11 @@ class Calculator:
     def multiply_numbers(self, value_a, value_b):
         """ multiply two numbers and store the result"""
         self.result = value_a * value_b
+        return self.result
+    def divide_number(self, value_a, value_b):
+        """ divide two numbers and store the result"""
+        try:
+            self.result = value_a / value_b
+        except ZeroDivisionError:
+            print("Cannot divide by zero")
         return self.result
