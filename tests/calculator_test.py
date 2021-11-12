@@ -1,44 +1,76 @@
 """Testing the Calculator"""
+import pprint
+
 import unittest
 
-from calculator.main import Calculator
+from calculator.calculator import Calculator
+
 class ATestCase(unittest.TestCase):
-    """Test case class"""
+    """Unit Test Class"""
+    #a function that will run each time you pass it to a test, it is called a fixture
     def setUp(self):
-        """Setting up initial calc"""
         self.calc = Calculator()
-    def test_calculator_result(self):
-        """testing calculator result is 0"""
-        assert self.calc.result == 0
+
+    def tearDown(self):
+        self.calc.clear_history()
 
     def test_calculator_add(self):
         """Testing the Add function of the calculator"""
-        #Act by calling the method to be tested
-        self.calc.add_number(4)
-        #Assert that the results are correct
-        assert self.calc.result == 4
+        # pylint: disable=unused-argument,redefined-outer-name
+        assert self.calc.add_number(1,2) == 3
+        assert self.calc.add_number(2, 2) == 4
+        assert self.calc.history_count() == 2
+        assert self.calc.get_result_of_last_calculation_added_to_history() == 4
+        pprint.pprint(Calculator.history)
 
-    def test_calculator_get_result(self):
-        """Testing the Get result method of the calculator"""
-        assert self.calc.get_result() == 0
+    def test_clear_history(self):
+        """Testing clear history function"""
+        # pylint: disable=unused-argument,redefined-outer-name
+        assert self.calc.add_number(1,2) == 3
+        assert self.calc.add_number(2, 2) == 4
+        assert self.calc.history_count() == 2
+        assert self.calc.clear_history() is True
+        assert self.calc.history_count() == 0
+
+    def test_count_history(self):
+        """Testing history's count function"""
+        # pylint: disable=unused-argument,redefined-outer-name
+        assert self.calc.history_count() == 0
+        assert self.calc.add_number(2, 2) == 4
+        assert self.calc.add_number(3, 2) == 5
+        assert self.calc.history_count() == 2
+
+    def test_get_last_calculation_result(self):
+        """Testing the last calculation result stored"""
+        # pylint: disable=unused-argument,redefined-outer-name
+        assert self.calc.add_number(2, 2) == 4
+        assert self.calc.add_number(3, 2) == 5
+        assert self.calc.get_result_of_last_calculation_added_to_history() == 5
+
+    def test_get_first_calculation_result(self):
+        """Testing the first calculation result stored"""
+        # pylint: disable=unused-argument,redefined-outer-name
+        assert self.calc.add_number(2, 2) == 4
+        assert self.calc.add_number(3, 2) == 5
+        assert self.calc.get_result_of_first_calculation_added_to_history() == 4
 
     def test_calculator_subtract(self):
         """Testing the subtract method of the calculator"""
-        # calc = Calculator()
-        self.calc.subtract_number(1)
-        assert self.calc.get_result() == -1
+        # pylint: disable=unused-argument,redefined-outer-name
+        assert self.calc.subtract_number(1, 2) == -1
 
     def test_calculator_multiply(self):
         """ tests multiplication of two numbers"""
-        self.calc.multiply_numbers(1,2)
-        assert self.calc.result == 2
+        # pylint: disable=unused-argument,redefined-outer-name
+        assert self.calc.multiply_numbers(1,2) == 2
 
     def test_calculator_divide(self):
         """ tests division of two numbers"""
-        self.calc.divide_number(10, 2)
-        assert self.calc.result == 5
+        # pylint: disable=unused-argument,redefined-outer-name
+        assert self.calc.divide_numbers(10, 2) == 5
 
     def test_calculator_zero_divide(self):
         """ tests division by zeros"""
-        self.calc.divide_number(10, 0)
+        # pylint: disable=unused-argument,redefined-outer-name
+        self.calc.divide_numbers(10,0)
         self.assertRaises(ZeroDivisionError)
