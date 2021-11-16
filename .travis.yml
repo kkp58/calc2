@@ -9,4 +9,4 @@ script:
 
 branches:
   only:
-    - part2
+    - part3
