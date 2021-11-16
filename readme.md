@@ -1,5 +1,3 @@
-#Calculator Setup
+#Part3 - Refactoring of Calculator
 
-##Part2 - Improved Calculator
-
-[![Build Status](https://app.travis-ci.com/kkp58/calc2.svg?branch=part2)](https://app.travis-ci.com/kkp58/calc2)
+[![Build Status](https://app.travis-ci.com/kkp58/calc2.svg?branch=part3)](https://app.travis-ci.com/kkp58/calc2)
