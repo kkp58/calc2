@@ -1,7 +1,9 @@
 """Testing the Calculator"""
 import pytest
+import pandas
 from calc.calculator import Calculator
 from calc.history.calculations import Calculations
+from calc.calculations.addition import Addition
 @pytest.fixture
 def clear_history_fixture():
     """define a function that will run each time you pass it to a test, it is called a fixture"""
@@ -38,3 +40,11 @@ def test_calculator_divide_static(clear_history_fixture):
     my_tuple = (1.0,2.0,0.5)
     Calculator.divide_numbers(my_tuple)
     assert Calculator.get_last_result_value() == 1
+    additionResult = open("additionResult.txt", "w")
+    additionResult.write('Record Value 1, Value 2, Result \n')
+    test_data = pandas.read_csv("tests/test_data/addition.csv")
+    for record, row in test_data.iterrows():
+        x =Addition((row['Value 1'], row['Value 2']))
+        additionResult.write(str(record) + " " +str(row['Value 1']) + " , " + str(row['Value 2']) + " , " + str(x.get_result()))
+        additionResult.write("\n")
+    additionResult.close()
