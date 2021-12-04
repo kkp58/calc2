@@ -2,3 +2,6 @@
 
 
 [![Build Status](https://app.travis-ci.com/kkp58/calc2.svg?branch=csv)](https://app.travis-ci.com/kkp58/calc2)
+
+
+###Output file(log file) - "allFunctionsResults.txt"
