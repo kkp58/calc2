@@ -6,10 +6,9 @@ class Division(Calculation):
     """division calculation object"""
     def get_result(self):
         """get the division results"""
-        result = 1.0
-        for value in self.values:
-            try:
-                result = result / value
-            except ZeroDivisionError:
-                print("Cannot divide by zero")
+        try:
+            result = self.values[0]/self.values[1]
+        except ZeroDivisionError:
+            err_name = "ZeroDivisionError"
+            return err_name
         return result

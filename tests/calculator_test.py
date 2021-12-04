@@ -1,9 +1,7 @@
 """Testing the Calculator"""
 import pytest
-import pandas
 from calc.calculator import Calculator
 from calc.history.calculations import Calculations
-from calc.calculations.addition import Addition
 @pytest.fixture
 def clear_history_fixture():
     """define a function that will run each time you pass it to a test, it is called a fixture"""
@@ -21,9 +19,9 @@ def test_calculator_subtract_static(clear_history_fixture):
     """Testing the subtract method of the calc"""
     # pylint: disable=unused-argument,redefined-outer-name
     #using Tuple instead of args because we can pack as much data as we need into the tuple
-    my_tuple = (1.0,2.0,3.0)
+    my_tuple = (1.0,2.0)
     Calculator.subtract_numbers(my_tuple)
-    assert Calculator.get_last_result_value() == -6.0
+    assert Calculator.get_last_result_value() == -1.0
 
 def test_calculator_multiply_static(clear_history_fixture):
     """Testing the multiply method of the calc"""
@@ -37,14 +35,6 @@ def test_calculator_divide_static(clear_history_fixture):
     """Testing the divide method of the calc"""
     # pylint: disable=unused-argument,redefined-outer-name
     #using Tuple instead of args because we can pack as much data as we need into the tuple
-    my_tuple = (1.0,2.0,0.5)
+    my_tuple = (1.0,2.0)
     Calculator.divide_numbers(my_tuple)
-    assert Calculator.get_last_result_value() == 1
-    additionResult = open("additionResult.txt", "w")
-    additionResult.write('Record Value 1, Value 2, Result \n')
-    test_data = pandas.read_csv("tests/test_data/addition.csv")
-    for record, row in test_data.iterrows():
-        x =Addition((row['Value 1'], row['Value 2']))
-        additionResult.write(str(record) + " " +str(row['Value 1']) + " , " + str(row['Value 2']) + " , " + str(x.get_result()))
-        additionResult.write("\n")
-    additionResult.close()
+    assert Calculator.get_last_result_value() == 0.5

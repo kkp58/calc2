@@ -1,4 +1,5 @@
-"""Calculation history Class"""
+"""Calculation Class with history"""
+
 from calc.calculations.addition import Addition
 from calc.calculations.subtraction import Subtraction
 from calc.calculations.multiplication import Multiplication
