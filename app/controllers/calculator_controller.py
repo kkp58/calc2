@@ -7,11 +7,9 @@ class CalculatorController(ControllerBase):
     @staticmethod
     def post():
         if request.form['value1'] == '' or request.form['value2'] == '':
-            error = 'You must enter a value for value 1 and or value 2'
+            error = 'You must need to enter a number for value 1 or value 2'
         else:
-            flash('You successfully calculated')
-            flash('You are awesome')
-
+            flash('Your calculation is done successfully')
             # get the values out of the form
             value1 = request.form['value1']
             value2 = request.form['value2']
@@ -22,7 +20,7 @@ class CalculatorController(ControllerBase):
             getattr(Calculator, operation)(my_tuple)
             result = str(Calculator.get_last_result_value())
             return render_template('result.html', value1=value1, value2=value2, operation=operation, result=result)
-        return render_template('calculator2.html', error=error)
+        return render_template('calculator.html', error=error)
     @staticmethod
     def get():
-        return render_template('calculator2.html')
+        return render_template('calculator.html')
