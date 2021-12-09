@@ -7,7 +7,7 @@ class Division(Calculation):
     def get_result(self):
         """get the division results"""
         try:
-            result = self.value_a/self.value_b
+            result = self.values[0]/self.values[1]
         except ZeroDivisionError:
             err_name = "ZeroDivisionError"
             return err_name
