@@ -5,11 +5,14 @@
     <style type="text/css">
         .important { color: #336699; }
     </style>
+
 {% endblock %}
 {% block content %}
-    <h1>Welcome to the Calculator application</h1>
+<section class = 'homebg'>
+    <h1 class = 'title'>Welcome to the Calculator application</h1>
     <p class="important">
-      This is Home page
-        <img src="{{ url_for('static', filename='images/concept1.jpg') }}">
+      This is Home Page
+<!--        <img src="{{ url_for('static', filename='images/concept1.jpg') }}">-->
     </p>
+    </section>
 {% endblock %}
