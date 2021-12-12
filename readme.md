@@ -1,6 +1,5 @@
-## Flask Messages and Validation
+## Beautiful Tables HW
 
+#### result.csv file - is where the results gets written.
 
-![Screenshot-1](/app/static/images/Flask_1.PNG "Screenshot-1")
-
-![Screenshot-2](/app/static/images/Flask_2.PNG "Screenshot-2")
+![Screenshot-1](/app/static/images/Table_HW.JPG "Screenshot-1")
