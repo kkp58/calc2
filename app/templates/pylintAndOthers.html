@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block content %}
+
+<!--<!DOCTYPE html>
+<html lang="en">-->
 <head>
     <meta charset="UTF-8">
     <title>Pylint and Terms</title>
@@ -9,24 +12,7 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-<section id="header">
-    <nav>
-        <a href="../index.html"><img src="../images/logo1.png" alt=""></a>
-        <div class="nav-links" id="navLinks">
-            <i class="fas fa-times" onclick="hideMenu()"></i>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../history.html">History</a></li>
-                <li><a href="../concept.html">Concepts</a></li>
-                <li><a href="pylintAndOthers.html">Pylint & Terms</a></li>
-                <li><a href="AAATesting.html">AAA Testing</a></li>
-                <li><a href="oops.html">OOPS</a></li>
-                <li><a href="design.html">Design Patterns</a></li>
-            </ul>
-        </div>
-        <i class="fas fa-bars" onclick="showMenu()"></i>
-    </nav>
-</section>
+
 <section id="second">
     <div class="row">
         <div id="pylint" class="col-md-6 card">
@@ -162,25 +148,6 @@
         </div>
     </div>
 </section>
-<section class="foot">
-    <footer>
-        <div class="row">
-            <div class="col-md-4">
-                © Krishna Patel:
-                <a href="https://github.com/kkp58/Project1/tree/Project2"> Github Repository</a>
-            </div>
-            <div class="col-md-4">
-                © Krishna Patel:
-                <a href="https://github.com/kkp58/Project1/tree/CodePart3">Python Code</a>
-            </div>
-            <div class="col-md-4">
-                <a href = "https://validator.w3.org/">
-                    <img alt="Icon"
-                         src="https://www.w3.org/Icons/valid-html401.png"></a>
-            </div>
-        </div>
-    </footer>
-</section>
-<script src="../toggle.js"></script>
+
 </body>
-</html>
+{% endblock %}

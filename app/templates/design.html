@@ -1,5 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block content %}
+<!--<!DOCTYPE html>
+<html lang="en">-->
 <head>
     <meta charset="UTF-8">
     <title>Design patterns</title>
@@ -9,9 +11,9 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body id="page">
-<section id="header">
+<!--<section id="header">
     <nav>
-        <a href="../index.html"><img src="../images/logo1.png" alt=""></a>
+        <a href="../index.html"><img src="../static/images/logo1.png" alt=""></a>
         <div class="nav-links" id="navLinks">
             <i class="fas fa-times" onclick="hideMenu()"></i>
             <ul>
@@ -26,7 +28,7 @@
         </div>
         <i class="fas fa-bars" onclick="showMenu()"></i>
     </nav>
-</section>
+</section>-->
 <section id="design">
     <div id="patterns" class="card">
         <p>A <b>design pattern</b> provides a general reusable solution for the common problems that occur in software design.
@@ -99,25 +101,5 @@
         </p>
     </div>
 </section>
-<section class="foot">
-    <footer>
-        <div class="row">
-            <div class="col-md-4">
-                © Krishna Patel:
-                <a href="https://github.com/kkp58/Project1/tree/Project2"> Github Repository</a>
-            </div>
-            <div class="col-md-4">
-                © Krishna Patel:
-                <a href="https://github.com/kkp58/Project1/tree/CodePart3"> Python Code</a>
-            </div>
-            <div class="col-md-4">
-                <a href = "https://validator.w3.org/">
-                    <img alt="Icon"
-                         src="https://www.w3.org/Icons/valid-html401.png"></a>
-            </div>
-        </div>
-    </footer>
-</section>
-<script src="../toggle.js"></script>
 </body>
-</html>
+{% endblock %}

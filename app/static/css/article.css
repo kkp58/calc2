@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
 nav {
     background-color: #193366;
     display: flex;
@@ -194,4 +200,22 @@ nav .fas {
     text-align: center !important;
     background-color: #193366;
     color: white;
+    margin-top: auto;
+}
+
+.empty{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+#value{
+    margin: auto;
+    width: 80%;
+    text-align: center;
+}
+
+.historyTable{
+    text-align: center;
+    margin-bottom: 80px;
 }
