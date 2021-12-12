@@ -1,6 +1,6 @@
 """ This is the increment function"""
 from calc.history.calculations import Calculations
-
+import pandas as pd
 #the calculator class just contains the methods to calculate
 class Calculator:
     """ This is the Calculator class"""
@@ -31,3 +31,9 @@ class Calculator:
         """ division number from result"""
         Calculations.add_division_calculation(tuple_values)
         return True
+
+    @staticmethod
+    def writeToCSV(value1, value2, result, operation):
+        data = {'value1': value1, 'value2': value2, 'operation': operation, 'result': result}
+        df = pd.DataFrame([data])
+        df.to_csv('result.csv', mode='a', index=False, header=False)
