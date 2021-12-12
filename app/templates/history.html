@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>History</title>
+    <link rel="stylesheet" href="../static/css/history.css">
+    <script src="https://kit.fontawesome.com/86aca87940.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+<section class="header sticky-top app-sticky">
+    <nav>
+        <a href="index.html"><img src="../static/images/logo1.png" alt=""></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fas fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="concept.html">Concepts</a></li>
+                <li><a href="oops.html">OOPS</a></li>
+            </ul>
+        </div>
+        <i class="fas fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+<section class="secondSection">
+    <div class="jumbotron">
+        <div class="col-12 text-center">
+            <h1>History of Internet - 1962 to 1992</h1>
+        </div>
+        <div style="margin-bottom: 50px" class="row rock">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img alt="Bob Taylor" id="Bob" class="rounded-circle"
+                             src="../static/images/Bob%20Taylor.jpg">
+                    </div>
+                    <div class="col-md-4">
+                        <blockquote>
+                            <p>In <b>1966</b>, <u>Bob Taylor</u> of ARPA needed a separate terminal to log into each of several shared
+                                computers at
+                                research centers across the country. No two computers could talk to each other. So
+                                Taylor had to move
+                                from terminal to terminal to work on a different computer. He knew that a single
+                                terminal would work, if
+                                all the computers were in the same network.
+                                Taylor recruited Larry Roberts for that job. Roberts had built the world's first
+                                experimental connection
+                                between two computers at the MIT Lincoln laboratories in Lexington, Massachusetts.
+                                He lived with Leonard Kleinrock at MIT and learned about packet switching and queuing,
+                                because he was his
+                                officemate and so Roberts built the same kind of connection ARPAnet had, except it was
+                                distributed to
+                                more people.</p>
+                        </blockquote>
+                    </div>
+                    <div class="col-md-2">
+                        <img alt="Larry Roberts" class="rounded-circle"
+                             src="../static/images/Larry_Roberts.jpg">
+                    </div>
+                    <div class="col-md-4">
+                        <blockquote>
+                            <p>In <b>1968</b>, <u>Larry Roberts</u> sought out the engineers to build the ARPANET. It was going to be
+                                based on special purpose mini computers called interface message processors(IMPs) and a
+                                revolutionary technology called <a href="concept.html">packet switching</a>.</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-bottom: 50px" class="row rock">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img alt="Message Processor" class="square"
+                             src="../static/images/MessageProcessor.jpg">
+                    </div>
+                    <div class="col-md-4">
+                        <blockquote>
+                            <p>In <b>1969</b>, time sharing was happening where you would
+                                actually sit at a terminal and you would type in your questions and your programs and
+                                the answer would come back in 2 seconds.
+                                The plan was to network 4 identical IMPs. Each one was to be attached to a different
+                                kind of mainframe computer and they were - a sigma seven at UCLA, and SDS 940 at the
+                                SRI, and IBM 360/75 at the UCSB, and a PDP 10 at the University of Utah.
+                                A small company in Cambridge, Bolt Beranek and Newman
+                                known as BBN wasn't sure either, but they were willing to try. Frank Heart headed the
+                                BBN team
+                                BBN won the contract and had to build the IMP for the ARPANET on January 1st 1969, which
+                                was due in 9 months with UCLA.
+                                On September 1 1969, the first piece of hardware created
+                                for the computer network that was the forerunner of the internet arrived at UCLA. It
+                                needed a lot of improvements, but was just sent on it’s due date. By the end of 1969,
+                                all four sites were interconnected.</p>
+                        </blockquote>
+                    </div>
+                    <div class="col-md-2">
+                        <img alt="Ray Tomlinson" id="ray" class="rounded-circle"
+                             src="../static/images/Ray_Tomlinson_(cropped).jpg">
+                    </div>
+                    <div class="col-md-4">
+                        <blockquote>
+                            <p>By <b>1972</b>, the ARPANET had 25 sites online. There was the first International Conference on
+                                computers and communication sponsored by ARPA. Robert Metcalfe, grad from MIT and
+                                Harvard was in charge of compiling a list of just what the network could do.
+                                <u>Raymond Tomlinson</u> was working on a mail program, but it was a program for a single
+                                computer, so that you could send messages from yourself to another user on the same time
+                                sharing computer. He thought that it could be also done across the network. So he put
+                                the code together, modified it a little bit and then the first email program was
+                                created. He was the one to get the @ sign</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-bottom: 50px" class="row rock">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img alt="Vint Cerf" id="cerf" class="rounded-circle"
+                             src="../static/images/cerf.jpg">
+                    </div>
+                    <div class="col-md-4">
+                        <blockquote>
+                            <p>In <b>1973</b>, <u>Vint Cerf</u> and Bob Kahn teamed up to develop a set of rules or procedures known
+                                as the <a href="concept.html">TCP/IP</a> protocol, that would allow computers to pass their message packets back
+                                and forth.
+                                Bob and Cerf concluded that they needed something called gateway that knew how to talk
+                                to each of the networks it was connected to(could be two or more) and could encapsulate
+                                packets coming from the host computers into packets going through the underlying
+                                networks.
+
+                                All the devices need to have some sort of unique addresses in order to connect to each
+                                other. The protocol was designed called Internet Protocol(IP address). IPv4 address was
+                                designed in 1973 and widely adopted in the early 80s.</p>
+                        </blockquote>
+                    </div>
+                    <div class="col-md-2">
+                        <img alt="DNS" class="square"
+                             src="../static/images/DNS.jpg">
+                    </div>
+                    <div class="col-md-4">
+                        <blockquote>
+                            <p>Finally, in <b>1983</b>, after 10 years of refinement and bureaucratic haggling, TCP/IP was
+                                adopted as the universal standard, marking a milestone in the development of the
+                                internet. A common network of interconnected networks.
+                                The Domain Name System <a href="concept.html">(DNS)</a> establishes the familiar .edu, .gov, .com, .mil, .org,
+                                .net, and .int system for naming websites</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="extraMargin" class="row rock">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img alt="Tim Berners-Lee" class="rounded-circle"
+                             src="../static/images/TIm.jpg">
+                    </div>
+                    <div class="col-md-4">
+                        <blockquote>
+                            <p>In <b>1990</b>, <u>Tim Berners-Lee</u>, a scientist at CERN, the European Organization for Nuclear Research,
+                                develops HyperText Markup Language <a href="concept.html">(HTML)</a>. This technology continues to have a large
+                                impact on how we navigate and view the Internet today.
+                                He developed the software to click on a word or phrase linked across the internet, one
+                                could instantaneously follow a link from site to site around the web in pursuit of a
+                                topic. He named this invention the World Wide Web(WWW)</p>
+                        </blockquote>
+                    </div>
+                    <div class="col-md-2">
+                        <img alt="Web Page" class="square"
+                             src="../static/images/webPage.jpg">
+                    </div>
+                    <div class="col-md-4">
+                        <blockquote>
+                            <p>However, one of the internet's major milestones was achieved not by technology, but by an
+                                act of Congress. On June 9 <b>1992</b>, Congress passed a bill taking the internet out of the
+                                exclusive hands of the government and into the public. The following November, President
+                                Bush signed it into law. But still in 1992, there were only 50 web pages on the
+                                internet.</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 50px" class="row rock">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img alt="Summary" class="square"
+                             src="../static/images/summary.jpg">
+                    </div>
+                    <div class="col-md-8">
+                        <blockquote>
+                            <ul>
+                                <li>By allowing free enterprise and individuals access to the internet, it was evolving
+                                    into a rapid growth of previously unimagined uses.
+                                </li>
+                                <li>
+                                    By the late 90s, the Internet was so famous that it completely redefined the use of
+                                    personal computers. Everything happened to work by the brick of one scientist at a
+                                    time bringing into this huge thing of what we call the Internet.
+                                </li>
+                                <li>
+                                    Everything is happening now by a few clicks sitting at home in a matter of just a
+                                    few seconds.</li>
+                                <li>
+                                    After the Internet many applications, softwares were built on it and
+                                    came into the market booming and making a huge impact on society. Microsoft,
+                                    Netscape, Yahoo, YouTube, Google, Facebook and so on.
+                                </li>
+                            </ul>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <footer class="foot">
+        <div class="row">
+            <div class="col-md-4">
+                Image Credits - <a href="https://creativecommons.org/">https://creativecommons.org/</a>
+            </div>
+            <div class="col-md-4">
+                © Krishna Patel:
+                <a href="https://github.com/kkp58/Project1"> Github Repository</a>
+            </div>
+            <div class="col-md-4">
+                <img alt="Icon"
+                     src="https://www.w3.org/Icons/valid-html401.png">
+            </div>
+        </div>
+    </footer>
+</section>
+<script src="toggle.js"></script>
+</body>
+</html>
