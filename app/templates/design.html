@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Design patterns</title>
+    <link rel="stylesheet" href="../static/css/article.css">
+    <script src="https://kit.fontawesome.com/86aca87940.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body id="page">
+<section id="header">
+    <nav>
+        <a href="../index.html"><img src="../images/logo1.png" alt=""></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fas fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../history.html">History</a></li>
+                <li><a href="../concept.html">Concepts</a></li>
+                <li><a href="pylintAndOthers.html">Pylint & Terms</a></li>
+                <li><a href="AAATesting.html">AAA Testing</a></li>
+                <li><a href="oops.html">OOPS</a></li>
+                <li><a href="design.html">Design Patterns</a></li>
+            </ul>
+        </div>
+        <i class="fas fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+<section id="design">
+    <div id="patterns" class="card">
+        <p>A <b>design pattern</b> provides a general reusable solution for the common problems that occur in software design.
+            The
+            pattern typically shows relationships and interactions between classes or objects. By using design patterns,
+            one
+            can make code more flexible, reusable, and maintainable.
+            There are mainly three types of design patterns - Creational, Structural and Behavioral
+        <ol>
+            <li>
+                <b>Creational </b> design patterns are the Factory Method, Abstract Factory, Builder, Singleton, Object Pool,
+                and
+                Prototype. It involves how you create objects. <br><br>
+
+                In many real-world situations, we want to create only one instance of a class.
+                For example, in our calculator program, we have only one 'history'(static property) which stores all the
+                calculations done before. This pattern is called a <b>Singleton</b> pattern. <br><br>
+
+                Suppose we want to create multiple instances of a similar kind and want to achieve loose coupling
+                then we go for <b>Factory</b> pattern. A class implementing a factory design pattern works as a bridge between
+                multiple classes. For our calculator program, we have used factory to create objects like different
+                calculations(addition, subtraction, etc). Through loose coupling it allows us to add new types of
+                products
+                without disturbing previous code. <br>
+
+                This is the calculation class code <br>
+                <code>
+                    @classmethod <br>
+                    def create(cls,values: tuple): <br>
+                    &emsp; &emsp; """ factory method""" <br>
+                    &emsp; &emsp; return cls(values)
+                </code> <br> <br>
+                Added a division object to history using factory method create <br>
+                <code>
+                    def add_division_calculation(values): <br>
+                    &emsp; &emsp; Calculations.add_calculation(Division.create(values)) <br>
+                    &emsp; &emsp; return True <br>
+                </code> <br>
+            </li>
+            <li>
+                <b>Structural</b> design patterns are Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Private Class
+                Data,
+                and Proxy. It is how you organize the program <br><br>
+                <b>Facade</b> - Any library does many things for you, but we need only a few things for our program. So you put
+                a
+                facade(a structure) around the library to only do the specific things you need and even while testing,
+                it
+                only tests for the functionalities you have used. So facade wraps up the functionality of any library
+                and
+                then provides easy user access.
+                When you wrap the commands, that is called facade. It is an overall class. <br>
+                For our example, the ‘Calculator’
+                class wraps the ‘calculations’ class in a facade and provides the interface to send the commands to the
+                ‘calculations’ class. <br> <br>
+            </li>
+            <li>
+                <b>Behavioral</b> patterns are Chain of responsibility, Command, Interpreter, Iterator, Mediator, Memento, Null
+                Object, Observer, State, Strategy, Template method, Visitor. It is like how your program reacts to
+                things. <br><br>
+                <b>Command</b> - A behavioral design pattern that converts requests or simple operations into objects. One line
+                of code. Commands are sent to the calculations library to do what they need to do. <br>
+                For example, in our
+                calculator program, we are giving set of methods to provide commands like add, subtract, multiply,
+                divide, add calculation, get_results and so on. Our code is the set of commands that perform different
+                operations. <br>
+                <code>Calculations.add_division_calculation(tuple_values)</code><br>
+                This is an example of command to add division
+            </li>
+        </ol>
+        </p>
+    </div>
+</section>
+<section class="foot">
+    <footer>
+        <div class="row">
+            <div class="col-md-4">
+                © Krishna Patel:
+                <a href="https://github.com/kkp58/Project1/tree/Project2"> Github Repository</a>
+            </div>
+            <div class="col-md-4">
+                © Krishna Patel:
+                <a href="https://github.com/kkp58/Project1/tree/CodePart3"> Python Code</a>
+            </div>
+            <div class="col-md-4">
+                <a href = "https://validator.w3.org/">
+                    <img alt="Icon"
+                         src="https://www.w3.org/Icons/valid-html401.png"></a>
+            </div>
+        </div>
+    </footer>
+</section>
+<script src="../toggle.js"></script>
+</body>
+</html>
