@@ -1,23 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
-<table id="data" class="table table-striped">
+<table id="value" class="table table-hover table-dark">
+    <h2 class="historyTable">Calculations History</h2>
     <thead>
-      <tr>
+    <tr>
+        <th>#</th>
         <th>Value 1</th>
         <th>Value 2</th>
         <th>Result</th>
         <th>Operation</th>
-      </tr>
+    </tr>
     </thead>
     <tbody>
-      {% for value in values %}
-        <tr>
-          <td>{{ value[0] }}</td>
-          <td>{{ value[1] }}</td>
-          <td>{{ value[3] }}</td>
-          <td>{{ value[2] }}</td>
-        </tr>
-      {% endfor %}
+    {% for value in values %}
+    <tr>
+        <td>{{loop.index}}</td>
+        <td>{{ value[0] }}</td>
+        <td>{{ value[1] }}</td>
+        <td>{{ value[3] }}</td>
+        <td>{{ value[2] }}</td>
+    </tr>
+    {% endfor %}
     </tbody>
 </table>
 {% endblock %}
