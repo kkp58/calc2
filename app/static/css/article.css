@@ -219,3 +219,60 @@ nav .fas {
     text-align: center;
     margin-bottom: 80px;
 }
+
+
+
+.secondSection{
+    background-color: gainsboro;
+}
+
+.rock{
+    clear: both;
+    margin: auto;
+}
+
+.rounded-circle{
+    margin-left: 50px;
+    height: 70%;
+    width: 80%;
+}
+
+col h1{
+    text-align: -moz-center;
+}
+
+.text-center{
+    margin-bottom: 50px;
+}
+
+.second{
+    margin-left: 150px;
+}
+#Bob{
+    width: 80%;
+}
+.square{
+    border: 2px solid black;
+    margin-left: 40px;
+    width: 90%;
+    height: 70%;
+}
+
+#ray{
+    width: 80%;
+    height: 70%;
+}
+
+#cerf{
+    width: 80%;
+}
+
+#extraMargin{
+    margin-top: 50px;
+}
+
+p{
+    font-size: 16px;
+}
+
+
