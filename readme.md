@@ -2,7 +2,7 @@
 
 #### Calculations are stored into result.csv. Flask is used for 4 web pages from previous assignment.
 
-[Project Demo](https://mediaspace.njit.edu/edit/1_jlsllcxn)
+[Project Demo](https://mediaspace.njit.edu/media/Project-3/1_jlsllcxn)
 
 
 [comment]: <> (![Screenshot-1]&#40;/app/static/images/Flask_1.PNG "Screenshot-1"&#41;)
