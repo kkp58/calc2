@@ -1,2 +1,3 @@
-2,3,addition,5.0
-4,5,multiplication,20.0
+456,100,addition,556.0
+100,0,division,ZeroDivisionError
+90,90,subtraction,0.0
