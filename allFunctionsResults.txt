@@ -1,4 +1,4 @@
-Time Stamp:2021-12-04 02:43:54.887449 Operation Addition
+Time Stamp:2021-12-15 22:45:33.606416 Operation Addition
 Record Value 1, Value 2, Result 
 0 47.0762264 , 42.17457631 , 89.25080271
 1 39.40843415 , 98.69175367 , 138.10018782
@@ -12,7 +12,7 @@ Record Value 1, Value 2, Result
 9 98.45086952 , 53.75707481 , 152.20794433
 
  
-Time Stamp:2021-12-04 02:43:54.985803 Operation Subtraction
+Time Stamp:2021-12-15 22:45:33.612173 Operation Subtraction
 Record Value 1, Value 2, Result 
 0 98.38584116 , 46.8735473 , 51.51229386
 1 79.08078252 , 37.95572778 , 41.12505474
@@ -26,7 +26,7 @@ Record Value 1, Value 2, Result
 9 72.64005743 , 31.64572452 , 40.99433291
 
  
-Time Stamp:2021-12-04 02:43:55.002447 Operation Multiplication
+Time Stamp:2021-12-15 22:45:33.617782 Operation Multiplication
 Record Value 1, Value 2, Result 
 0 11.21777396 , 91.98299863 , 1031.8444867943297
 1 84.59645797 , 95.93037141 , 8115.369633032556
@@ -39,7 +39,7 @@ Record Value 1, Value 2, Result
 8 5.059121684 , 30.64358786 , 155.02963981808514
 
  
-Time Stamp:2021-12-04 02:43:55.013348 Operation Division
+Time Stamp:2021-12-15 22:45:33.623237 Operation Division
 Record Value 1, Value 2, Result 
 0 40.7890788 , 48.91873659 , 0.8338130058808209
 1 66.61040572 , 90.93484197 , 0.7325069717718893
