@@ -1,6 +1,7 @@
-""" This is the increment function"""
-from calc.history.calculations import Calculations
+""" This is the class Calculator"""
 import pandas as pd
+from calc.history.calculations import Calculations
+
 #the calculator class just contains the methods to calculate
 class Calculator:
     """ This is the Calculator class"""
@@ -33,7 +34,8 @@ class Calculator:
         return True
 
     @staticmethod
-    def writeToCSV(value1, value2, result, operation):
+    def write_to_csv(value1, value2, result, operation):
+        """to write the data to csv files"""
         data = {'value1': value1, 'value2': value2, 'operation': operation, 'result': result}
-        df = pd.DataFrame([data])
-        df.to_csv('result.csv', mode='a', index=False, header=False)
+        records = pd.DataFrame([data])
+        records.to_csv('result.csv', mode='a', index=False, header=False)
